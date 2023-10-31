@@ -8,7 +8,20 @@
 html, body{
 height: 100%;
 width: 100%;
-perspective: 800px;
+/*perspective: 800px;*/
+}
+*::selection{
+    background-color: #fff;
+    color: #42bcb3;
+}
+body::-webkit-scrollbar{
+    display: block;
+    width: 10px;
+    background-color: #000;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #42bcb3;
+    border-radius: 50px;
 }
 #cursor{
     height: 20px;
@@ -91,6 +104,28 @@ video{
     font-weight: 400;
     width: 40%;
 }
+#page1 #arrow{
+    height: 200px;
+    width: 200px;
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    left: -3%;
+    bottom: -3%;
+    border: 2px solid #42bcb3;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all ease 0.5s;
+}
+#page1 #arrow i{
+    font-size: 50px;
+    font-weight: 100px;
+}
+#page1 #arrow:hover{
+    scale: 0.4;
+    background-color: #42bcb3;
+}
 #page2 {
     height: 100vh;
     width: 100%;
@@ -103,6 +138,7 @@ video{
     overflow-y: hidden;
     position: relative;
     z-index: 10;
+    margin-top: 80px;
 
 }
 #scroller::-webkit-scrollbar{
@@ -121,7 +157,7 @@ video{
     display: inline-block;
     font-size: 90px;
     font-weight: 900px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;  
     margin-right: 10px;
     color: transparent;
     -webkit-text-stroke: 2px #42bcb3;
@@ -149,12 +185,13 @@ video{
     z-index: 10;
 }
 .card{
-    height: 80%;
+    height: 100%;
     width: 24%;
     /*background-color: red;*/
     border-radius: 15px;
     overflow: hidden;
     transition: all ease 0.6s;
+    margin-top : 80px;
 }
 #card1{
     background-image: url(https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&w=600);
